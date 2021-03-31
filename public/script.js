@@ -32,28 +32,3 @@ async function windowActions() {
 }
 
 window.onload = windowActions();
-
-/*
-async function fetchDining() {
-  const response = await fetch('/api/dining/');
-  const diningHall = await response.json();
-  return diningHall;
-}
-
-// create table
-async function createTable(tableData) {
-  const diningData = tableData.data;
-  diningData.forEach((element) => {
-    const tableRow = document.createElement('tr');
-    const tableHeadId = document.createElement('th'); // for each element
-    const diningId = document.createTextNode(diningData.hall_id);
-    tableHeadId.appendChild(diningId);
-    tableRow.appendChild(tableHeadId.diningId);
-  });
-}
-
-async function windowActions() {
-  const myData = await fetchDining();
-  createTable(myData);
-}
-*/
