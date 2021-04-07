@@ -1,20 +1,14 @@
 /* eslint-disable no-console */
 
-async function windowActions() {
+const tableBody = document.querySelector('.table-body');
+
+async function diningHalL() {
   console.log('window loaded');
   const request = await fetch('/api/dining/');
-  const data = await request.json();
-  console.log(data);
+  const diningData = await request.json();
+  console.log(diningData);
 
-  const table = document.querySelector('.table');
-  const headerRow = document.querySelector('.table-row');
-
-  data.forEach((element) => {
-    const cellHead = document.createElement('th');
-    cellHead.classList.add('table-cell-heading');
-    cellHead.innerText = element;
-    headerRow.append(cellHead);
-
+  diningData.data.forEach((element) => {
     const tableRow = document.createElement('tr');
     const diningId = document.createElement('td');
     const diningName = document.createElement('td');
@@ -24,11 +18,15 @@ async function windowActions() {
     diningName.innerText = element.hall_name;
     diningAddress.innerText = element.hall_address;
 
-    table.append(tableRow);
+    tableBody.append(tableRow);
     tableRow.append(diningId);
     tableRow.append(diningName);
     tableRow.append(diningAddress);
   });
+}
+
+async function windowActions() {
+  diningHalL();
 }
 
 window.onload = windowActions();
