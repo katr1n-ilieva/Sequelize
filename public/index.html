@@ -14,18 +14,32 @@
             
             <div class="box">
                 <h2>Dining Hall Meal Macros</h2>
-                <div class="chart">
+
+                <div id='macro-table'>
+                    <table class="table is-bordered is-striped is-narrow is-hoverable">
+                        <thead>
+                            <tr>
+                                <th>Meal ID</th>
+                                <th>Meal Name</th>
+                                <th>Calories</th>
+                                <th>Cholesterol</th>
+                                <th>Sodium</th>
+                                <th>Carbs</th>
+                                <th>Protein</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body2"></tbody>
+                    </table>
+
+                    <h2>Macros Breakdown</h2>
                     <div id="chartContainer" style="height: 300px; width: 100%;"></div>
                     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-                    <div style="margin-top:16px;color:dimgrey;font-size:9px;font-family: Verdana, Arial, Helvetica, sans-serif;text-decoration:none;">
-                        Source: <a href="https://canvasjs.com/javascript-charts/stacked-bar-chart/" target="_blank" title="JavaScript Stacked Bar Charts &amp; 
-                        Graphs ">https://canvasjs.com/javascript-charts/stacked-bar-chart/</a></div>
                 </div>
-                <table class="table" id="meals"></table>
+                
             </div>
             
             <div class='box'>
-                <h2>Dining Hall Tracker</h2>
+                <h2>Dining Halls</h2>
                 <table class='table is-bordered is-striped is-narrow is-hoverable'>
                     <thead>
                         <tr>
@@ -34,9 +48,7 @@
                             <th>Address</th>
                         </tr>
                     </thead>
-                    <tbody class='table-body'>
-        
-                    </tbody>
+                    <tbody class='table-body'></tbody>
                 </table>
             </div>
         </div>
